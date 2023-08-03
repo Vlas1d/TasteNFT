@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 
 module.exports = {
@@ -21,7 +22,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "index.html")
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new ImageminWebpWebpackPlugin()
     ],
 
     module: {
@@ -29,7 +31,10 @@ module.exports = {
             {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
-                use: 'ts-loader',
+                use: {
+                    loader: "babel-loader"
+                }
+                //use: 'ts-loader',
             },
             {
                 test: /\.css$/i,
@@ -38,7 +43,21 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|webp)$/i,
+                use: [
+                    {
+                        loader: 'webp-loader',
+                        options: {
+                            quality: 70
+                        }
+                    },
+                    {
+                        loader: 'file-loader'
+                    }
+                ]
+            },
         ],
     },
 

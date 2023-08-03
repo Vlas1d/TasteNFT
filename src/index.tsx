@@ -1,11 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDom from "react-dom";
+import { App } from "./App";
 
-import './styles/style.css';
-import './styles/style.scss';
+const root = document.getElementById('root') as HTMLBodyElement;
+const a: string = '123456789';
 
-const App: React.FC = () => {
-    return <h1>Hello, React App with TypeScript and Webpack! Yes!</h1>;
-};
+let component = (
+    <>
+        <h1>Заголовок</h1>
+        <b>текст 1</b>
+        <b>текст 2: {Array.from(a)}</b>
+        <App />
+    </>
+);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDom.render(component, root);
