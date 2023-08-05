@@ -15,6 +15,9 @@
         "strict": true,
         "esModuleInterop": true
     },
+    "files": [
+        "index.d.ts"
+    ],
     "include": [
         "src",
         "./src/declaration.d.ts"

@@ -1,8 +1,44 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
+const optimization = () => {
+    return config = {
+        splitChunks: {
+            chunks: 'all'
+        },
+        minimize: true,
+        minimizer: [
+            new ImageMinimizerPlugin({
+                minimizer: {
+                    implementation: ImageMinimizerPlugin.imageminMinify,
+                    options: {
+                        plugins: [
+                            ["gifsicle", { interlaced: true }],
+                            ["jpegtran", { progressive: true }],
+                            ["optipng", { optimizationLevel: 5 }],
+                            "imagemin-svgo",
+                        ],
+                    },
+                },
+                loader: false, // Вимкнути вбудований loader, щоб зберегти оригінал
+                deleteOriginalAssets: false, // Не видаляти оригінальні файли
+                generator: [
+                    {
+                        filename: '[name].webp',
+                        type: "asset",
+                        implementation: ImageMinimizerPlugin.imageminGenerate,
+                        options: {
+                            plugins: ["imagemin-webp"],
+                        },
+                    },
+                ],
+            }),
+        ]
+    }
+}
 
 module.exports = {
     entry: { //вхідна точка
@@ -15,7 +51,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.tsx', '.ts', '.jsx', '.js'],
+        extensions: ['.tsx', '.ts', '.js'],
     },
 
     plugins: [
@@ -23,13 +59,14 @@ module.exports = {
             template: path.join(__dirname, "src", "index.html")
         }),
         new CleanWebpackPlugin(),
-        new ImageminWebpWebpackPlugin()
     ],
+
+    optimization: optimization(),
 
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.(ts|js)x?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -37,31 +74,31 @@ module.exports = {
                 //use: 'ts-loader',
             },
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /\.s[ac]ss$/i,
+                test: /^((?!\.module).)*s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpe?g|gif|svg|webp)$/i,
+                test: /\.module\.s[ac]ss$/i,
                 use: [
+                    'style-loader',
                     {
-                        loader: 'webp-loader',
-                        options: {
-                            quality: 70
-                        }
+                        loader: 'css-loader',
+                        options: { modules: true }
                     },
-                    {
-                        loader: 'file-loader'
-                    }
+                    'sass-loader'
                 ]
+            },
+            {
+                test: /\.(jpg|png|gif|svg|ico)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[name][ext]',
+                },
             },
         ],
     },
 
-    devServer: { //дев сервер
+    devServer: {
         static: path.join(__dirname, 'dist'),
         compress: true,
         port: 3000,
