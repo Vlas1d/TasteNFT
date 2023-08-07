@@ -47,7 +47,7 @@ module.exports = {
 
     output: { //вихідна директорія
         filename: 'bundle.[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'build')
     },
 
     resolve: {
@@ -95,11 +95,18 @@ module.exports = {
                     filename: '[name][ext]',
                 },
             },
+            {
+                test: /\.woff2?$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name].[ext]'
+                }
+            },
         ],
     },
 
     devServer: {
-        static: path.join(__dirname, 'dist'),
+        static: path.join(__dirname, 'build'),
         compress: true,
         port: 3000,
     },

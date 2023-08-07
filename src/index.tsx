@@ -1,7 +1,8 @@
-import React from "react";
-import ReactDom from "react-dom";
-import { App } from "./App";
-import "./styles/style.scss"
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
+import App from "./App";
+import "./style.scss";
 
 const root = document.getElementById('root') as HTMLBodyElement;
 const a: string = '123456789';
@@ -13,7 +14,7 @@ let component = (
         <h1>Заголовок</h1>
         <b>текст 1</b>
         <b>текст 2: {Array.from(a)}</b>
-        <App />
+        <App userName="Valdis" lang="UA" />
         <img src={imgWebp} />
         <picture >
             <source type='image/webp' srcSet='1.webp' />
@@ -22,7 +23,7 @@ let component = (
     </>
 );
 
-ReactDom.render(component, root);
+ReactDOM.render(component, root);
 /*
 <picture>
     <source src={imgWebp} type="image/webp" />

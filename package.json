@@ -33,6 +33,7 @@
     "imagemin-webp": "^8.0.0",
     "imagemin-webp-webpack-plugin": "^3.3.6",
     "less-loader": "^11.1.3",
+    "react-router-dom": "^6.14.2",
     "sass": "^1.64.2",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
