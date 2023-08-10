@@ -2,7 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 const optimization = () => {
     return config = {
@@ -12,18 +13,18 @@ const optimization = () => {
         minimize: true,
         minimizer: [
             new ImageMinimizerPlugin({
-                minimizer: {
+                minimizer: isProduction ? {
                     implementation: ImageMinimizerPlugin.imageminMinify,
                     options: {
                         plugins: [
                             ["gifsicle", { interlaced: true }],
                             ["jpegtran", { progressive: true }],
-                            ["optipng", { optimizationLevel: 5 }],
-                            "imagemin-svgo",
+                            ["optipng", { optimizationLevel: 7 }],
+                            ["svgo"],
                         ],
                     },
-                },
-                loader: false, // Вимкнути вбудований loader, щоб зберегти оригінал
+                } : undefined,
+                //loader: false, // Вимкнути вбудований loader, щоб зберегти оригінал
                 deleteOriginalAssets: false, // Не видаляти оригінальні файли
                 generator: [
                     {
@@ -74,33 +75,34 @@ module.exports = {
                 //use: 'ts-loader',
             },
             {
-                test: /^((?!\.module).)*s[ac]ss$/i,
+                test: /^((?!\.module).)*(s[ac]|c)ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.module\.s[ac]ss$/i,
+                test: /\.module\.(s[ac]|c)ss$/i,
                 use: [
                     'style-loader',
                     {
                         loader: 'css-loader',
-                        options: { modules: true }
+                        options: {
+                            modules: {
+                                exportLocalsConvention: 'camelCase', // Встановлюємо конвенцію експорту на camelCase
+                            },
+                        },
                     },
-                    'sass-loader'
+                    'sass-loader',
                 ]
             },
             {
-                test: /\.(jpg|png|gif|svg|ico)$/,
+                test: /\.(jpe?g|png|gif|svg|ico|webp)$/,
                 type: 'asset/resource',
                 generator: {
                     filename: '[name][ext]',
                 },
             },
             {
-                test: /\.woff2?$/i,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'fonts/[name].[ext]'
-                }
+                test: /\.(woff2?)$/,
+                type: 'asset/inline',
             },
         ],
     },
