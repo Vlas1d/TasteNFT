@@ -1,4 +1,5 @@
 import * as React from "react";
+import Main from './components/pages/main/Main';
 
 export interface HelloWorldProps {
     userName: string;
@@ -7,7 +8,7 @@ export interface HelloWorldProps {
 const App = () => {
     return (
         <>
-            <h1>HHH</h1>
+            <Main />
         </>
     );
 }
