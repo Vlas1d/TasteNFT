@@ -1,2 +1,26 @@
 @import './reset';
 @import './fonts';
+
+body {
+    background: #1D2228;
+    color: #fff;
+    font-family: 'Raleway-500';
+    font-size: 14px;
+    line-height: 18px;
+
+    overflow-x: hidden;
+}
+
+h3 {
+    font-family: 'Raleway-700';
+    font-size: 20px;
+}
+
+input {
+    background: #1D2228;
+    border: 0px solid #1D2228;
+    
+    &:focus {
+        outline: 1px solid #594dff;
+    }
+}

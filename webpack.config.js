@@ -101,7 +101,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(woff2?)$/,
+                test: /\.(woff2?|ttf)$/,
                 type: 'asset/inline',
             },
         ],

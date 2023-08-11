@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'Raleway-400';
-    src: url('./fonts/Raleway-Regular.woff2') format(woff2);
-    font-weight: 400;
+    src: url('./fonts/Raleway-Regular.woff2'),
+    url('./fonts/Raleway-Regular.ttf') format(truetype);
 }
 @font-face {
     font-family: 'Raleway-500';
-    src: url('./fonts/Raleway-Medium.woff2') format(woff2);
-    font-weight: 500;
+    src: url('./fonts/Raleway-Medium.woff2'),
+    url('./fonts/Raleway-Medium.ttf') format(truetype);
 }
 @font-face {
     font-family: 'Raleway-600';
-    src: url('./fonts/Raleway-SemiBold.woff2') format(woff2);
-    font-weight: 600;
+    src: url('./fonts/Raleway-SemiBold.woff2'),
+    url('./fonts/Raleway-SemiBold.ttf') format(truetype);
 }
 @font-face {
     font-family: 'Raleway-700';
-    src: url('./fonts/Raleway-Bold.woff2') format(woff2);
-    font-weight: 700;
+    src: url('./fonts/Raleway-Bold.woff2'),
+    url('./fonts/Raleway-Bold.ttf') format(truetype);
 }
 @font-face {
     font-family: 'Raleway-Italic';
-    src: url('./fonts/Raleway-MediumItalic.woff2') format(woff2);
-    font-weight: 500;
+    src: url('./fonts/Raleway-MediumItalic.woff2'),
+    url('./fonts/Raleway-MediumItalic.ttf') format(truetype);
     font-style: italic;
 }
 
@@ -29,16 +29,16 @@
 
 @font-face {
     font-family: 'Roboto-400';
-    src: url('./fonts/Roboto-Regular.woff2') format(woff2);
-    font-weight: 400;
+    src: url('./fonts/Roboto-Regular.woff2'),
+    url('./fonts/Roboto-Regular.ttf') format(truetype);
 }
 @font-face {
     font-family: 'Roboto-500';
-    src: url('./fonts/Roboto-Medium.woff2') format(woff2);
-    font-weight: 500;
+    src: url('./fonts/Roboto-Medium.woff2'),
+    url('./fonts/Roboto-Medium.ttf') format(truetype);
 }
 @font-face {
     font-family: 'Roboto-700';
-    src: url('./fonts/Roboto-Bold.woff2') format(woff2);
-    font-weight: 700;
+    src: url('./fonts/Roboto-Bold.woff2'),
+    url('./fonts/Roboto-Bold.ttf') format(truetype);
 }

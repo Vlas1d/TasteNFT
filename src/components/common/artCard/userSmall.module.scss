@@ -1,0 +1,41 @@
+.userSmall {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 131px;
+    height: 44px;
+    width: auto;
+    padding: 9px 10px;
+
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    & > * {
+        display: flex;
+        flex-direction: column;
+        transform: translate(-15px, 0px);
+    }
+
+    img {
+        transform: translate(-15px, 0px);
+    }
+
+    &__name {
+        font-family: 'Raleway-700';
+        font-size: 14px;
+        color: #1D2228;
+    }
+    &__tag {
+        font-family: 'Raleway-500';
+        font-size: 12px;
+        background: linear-gradient(270deg, #8743FF 0%, #4136F1 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

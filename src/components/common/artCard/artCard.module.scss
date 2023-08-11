@@ -1,0 +1,41 @@
+.artCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 317px;
+    height: 446px;
+
+    border: 1px solid #333940;
+
+    & > *:first-child {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+    }
+
+    & > img {
+        width: 317px;
+        height: 317px;
+    }
+
+    &__data {
+        margin-top: 24px;
+        padding: 0px 16px;
+    }
+    &__sold {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 17px;
+
+        & > *:last-child {
+            max-width: 95px;
+            width: 100%;
+        }
+    }
+    &__endTime {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+}

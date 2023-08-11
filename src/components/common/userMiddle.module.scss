@@ -1,0 +1,28 @@
+.userMiddle {
+    display: flex;
+    align-items: center;
+
+    min-width: 160px;
+    height: 49px;
+    width: auto;
+
+    padding: 10px;
+
+    & > * {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-family: 'Raleway-700';
+        font-size: 18px;
+    }
+    &__tag {
+        font-family: 'Raleway-500';
+        font-size: 14px;
+        background: linear-gradient(270deg, #8743FF 0%, #D8C2FF 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
