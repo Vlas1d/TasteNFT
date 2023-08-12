@@ -8,6 +8,12 @@
 
     border: 1px solid #333940;
 
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+        border: 1px solid #6358ff;
+    }
+
     & > *:first-child {
         position: absolute;
         top: 12px;
