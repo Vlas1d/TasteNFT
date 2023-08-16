@@ -1,0 +1,24 @@
+.swiper {
+    width: 200px;
+    height: 320px;
+    overflow: visible;
+}
+
+.swiperSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    //width: 200px ;
+
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+
+    background: #000;
+    border: 1px solid #fff;
+    .swiper-slide-next {
+        background: red !important;
+    }
+}
