@@ -8,6 +8,10 @@
 
     padding: 10px;
 
+    & > img {
+        margin-left: -25px;
+    }
+
     & > * {
         display: flex;
         flex-direction: column;
