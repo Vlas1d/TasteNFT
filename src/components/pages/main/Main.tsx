@@ -44,7 +44,7 @@ const avatars: string[] = [
     require('../../../images/small/user6.png'),
     require('../../../images/small/user7.png'),
     require('../../../images/small/user8.png'),
-]
+];
 import bigAvatar from '../../../images/userBig1.png';
 //-------------
 

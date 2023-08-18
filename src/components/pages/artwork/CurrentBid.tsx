@@ -16,7 +16,7 @@ const CurrentBid = () => {
             </div>
             <div className={style.currentBid__time}>
                 <span>Auction ending in:</span>
-                <Timer targetTime={new Date('2023-08-15T18:00:00')} />
+                <Timer targetTime={new Date('2023-08-25T18:00:00')} />
             </div>
             <div className={style.currentBid__button}>
                 <Button name='Place a bid' style={buttonStyle.button} />

@@ -3,8 +3,8 @@
     justify-content: space-between;
     align-items: center;
 
-    max-width: 518px;
-    width: 100%;
+    width: 518px;
+    //width: 100%;
     height: 75px;
     padding: 16px 20px;
 
@@ -16,7 +16,7 @@
         flex-direction: column;
         justify-content: space-between;
         border-right: 3px solid rgba(255, 255, 255, 0.15);
-        padding-right: 16px;
+        padding-right: 17px;
     }
     & > * {
         display: flex;
@@ -37,13 +37,15 @@
         & > *:last-child {
             display: flex;
             gap: 4px;
+            font-family: 'Raleway-600';
+            font-size: 16px;
             & > *:last-child {
                 color: rgba(255, 255, 255, 0.50);
             }
         }
     }
     &__time {
-
+        padding-right: 22px !important;
     }
     &__button {
         align-items: center;
