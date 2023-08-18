@@ -52,7 +52,7 @@ const Main = () => {
     return (
         <>
             <div className={m.header}>
-                <Header />
+                <Header auth={false} />
             </div>
             <div className='wrapper'>
                 <div className={`${m.main} container`}>

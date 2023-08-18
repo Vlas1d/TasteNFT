@@ -7,7 +7,11 @@ import logo from '../../../images/svg/logo.svg';
 import style from './header.module.scss';
 import buttonStyle from '../button.module.scss';
 
-const Header = () => {
+interface HeaderProps {
+    auth: boolean;
+}
+
+const Header = (props: HeaderProps) => {
     return (
         <div className={style.header}>
             <img src={logo} alt='' />

@@ -45,7 +45,7 @@ const Artwork = () => {
     return (
         <>
             <div className={a.header}>
-                <Header />
+                <Header auth={false} />
             </div>
             <div className='wrapper'>
                 <div className={`${a.art} container`}>
