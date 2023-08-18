@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+
+//-------styles
 import '../../../style.scss';
 import m from './main.module.scss';
 import b from '../../common/button.module.scss';
+//-------------
 
-
+//-------components
 import Header from '../../common/header/Header';
 import UserMiddle from '../../common/UserMiddle';
 import ArtCard from '../../common/artCard/ArtCard';
@@ -12,16 +15,37 @@ import Bid from '../../common/Bid';
 import CurrentBid from '../artwork/CurrentBid';
 import MainSlider from './MainSlider';
 import Sold from '../../common/Sold';
-
-import avatar from '../../../images/small/user1.png';
-import art from '../../../images/artCard/art1.jpg';
-import bigAvatar from '../../../images/userBig1.png';
 import Button from '../../common/Button';
+import DropList from '../../common/dropList/DropList';
+import CreatorsSlider from '../../common/CreatorsSlider';
+//------------------
 
 //-------images
 import externalLink from '../../../images/svg/external-link.svg';
 import share from '../../../images/svg/share.svg';
 import menuVertical from '../../../images/svg/menu-vertical.svg';
+
+const arts: string[] = [
+    require('../../../images/artCard/art1.jpg'),
+    require('../../../images/artCard/art2.jpg'),
+    require('../../../images/artCard/art3.jpg'),
+    require('../../../images/artCard/art4.jpg'),
+    require('../../../images/artCard/art5.jpg'),
+    require('../../../images/artCard/art6.jpg'),
+    require('../../../images/artCard/art7.jpg'),
+    require('../../../images/artCard/art8.jpg'),
+];
+const avatars: string[] = [
+    require('../../../images/small/user1.png'),
+    require('../../../images/small/user2.png'),
+    require('../../../images/small/user3.png'),
+    require('../../../images/small/user4.png'),
+    require('../../../images/small/user5.png'),
+    require('../../../images/small/user6.png'),
+    require('../../../images/small/user7.png'),
+    require('../../../images/small/user8.png'),
+]
+import bigAvatar from '../../../images/userBig1.png';
 //-------------
 
 const Main = () => {
@@ -51,6 +75,21 @@ const Main = () => {
                     <div className={m.main__slider}>
                         <MainSlider />
                     </div>
+                </div>
+                <div className={`${m.arts} container`}>
+                    <div className={m.arts__filters}>
+                        <DropList name='Recently added' />
+                        <DropList name='Auctions' />
+                    </div>
+                    <div className={m.arts__items}>
+                        {Array.from({ length: 8 }).map((_, index) => (
+                            <ArtCard artImage={arts[index]} userImage={avatars[index]} key={arts[index]} />
+                        ))}
+                    </div>
+                </div>
+                <div className={`${m.creators} container`}>
+                    <h1>Featured creators</h1>
+                    <CreatorsSlider />
                 </div>
             </div>
         </>

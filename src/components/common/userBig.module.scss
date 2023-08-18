@@ -8,12 +8,21 @@
     height: 222px;
     flex-shrink: 0;
 
+    padding-top: 8px;
+
     border: 1px solid #333940;
 
     transition: all 0.5s ease 0s;
 
     &:hover {
         border: 1px solid #6358ff;
+    }
+
+    h3 {
+        margin-top: 1px;
+    }
+    a {
+        margin-top: 2px;
     }
 
     & > img {

@@ -1,0 +1,24 @@
+.dropList {
+    display: inline-flex;
+    align-items: center;
+
+    height: 40px;
+    padding: 0px 24px;
+
+    font-family: 'Raleway-700';
+    font-size: 14px;
+
+    border-radius: 99px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 2px 5px 0px rgba(20, 102, 204, 0.16);
+
+    &:hover {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    img {
+        width: 8px;
+        height: 5px;
+        margin-left: 6px;
+    }
+}

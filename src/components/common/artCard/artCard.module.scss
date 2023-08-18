@@ -26,22 +26,28 @@
     }
 
     &__data {
-        margin-top: 24px;
+        margin-top: 26px;
         padding: 0px 16px;
     }
     &__sold {
         display: flex;
         justify-content: space-between;
-        margin-top: 17px;
+        margin-top: 19px;
+        & > span {
+            color: rgba(255, 255, 255, 0.50);
+        }
 
         & > *:last-child {
-            max-width: 95px;
+            max-width: 93px;
             width: 100%;
         }
     }
     &__endTime {
         display: flex;
         justify-content: space-between;
-        margin-top: 15px;
+        margin-top: 13px;
+        & > span {
+            color: rgba(255, 255, 255, 0.50);
+        }
     }
 }

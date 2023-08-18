@@ -26,13 +26,12 @@ const MainSlider = () => {
                 grabCursor={true}
                 effect={'cards'}
                 slidesPerView={'auto'}
-                spaceBetween={30}
                 centeredSlides={true}
 
                 cardsEffect={{
                     slideShadows: false, // Вимикаємо тіні на слайдах
                     rotate: false,
-                    perSlideOffset: 30,
+                    perSlideOffset: 29,
                 }}
 
                 pagination={{
@@ -40,7 +39,7 @@ const MainSlider = () => {
                 }}
 
                 modules={[EffectCards, Pagination]}
-                className='swiper'
+                className='mainSlider swiper'
             >
                 <SwiperSlide><img src={slide1} alt={slide1} /></SwiperSlide>
                 <SwiperSlide><img src={slide2} alt={slide2} /></SwiperSlide>

@@ -4,7 +4,7 @@
     align-items: center;
     flex-shrink: 0;
 
-    width: 131px;
+    width: 131px !important;
     height: 44px;
     width: auto;
     padding: 9px 10px;
@@ -14,6 +14,10 @@
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
 
     overflow: hidden;
+
+    & > div {
+        margin-left: -7px;
+    }
 
     & > * {
         display: flex;
@@ -29,8 +33,10 @@
         font-family: 'Raleway-700';
         font-size: 14px;
         color: #1D2228;
+        white-space: nowrap;
     }
     &__tag {
+        margin-top: -2px;
         font-family: 'Raleway-500';
         font-size: 12px;
         background: linear-gradient(270deg, #8743FF 0%, #4136F1 100%);

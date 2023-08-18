@@ -12,6 +12,13 @@
         margin-left: -25px;
     }
 
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-left: -3px;
+    }
+
     & > * {
         display: flex;
         flex-direction: column;
@@ -20,6 +27,7 @@
     &__name {
         font-family: 'Raleway-700';
         font-size: 18px;
+        margin-top: 7px;
     }
     &__tag {
         font-family: 'Raleway-500';

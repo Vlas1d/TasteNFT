@@ -26,7 +26,7 @@ const ArtCard = (props: ArtCardProps) => {
                 </div>
                 <div className={style.artCard__endTime}>
                     <span>Ending in:</span>
-                    <Timer targetTime={new Date('2023-08-15T18:00:00')} />
+                    <Timer targetTime={new Date('2023-08-25T18:00:00')} />
                 </div>
             </div>
         </div>

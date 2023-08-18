@@ -1,0 +1,28 @@
+.creators {
+    position: relative;
+    &.swiper {
+    width: 100%;
+    height: 243px;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: 245px !important;
+        height: 245px !important;
+    }
+
+    .swiper-scrollbar {
+        position: absolute !important;
+        left: 0px !important;
+        bottom: 0px !important;
+        height: 5px !important;
+        background: transparent;
+
+        &-drag {
+            background: rgba(255, 255, 255, 0.50);
+            border-radius: 2.5px;
+        }
+    }
+}
