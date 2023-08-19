@@ -42,11 +42,7 @@
             color: #fff;
 
             &:focus {
-                position: fixed;
-                width: 98vw;
-                height: 45px;
-                top: 5px;
-                left: 1vw;
+                z-index: 1;
             }
         }
 
@@ -56,6 +52,7 @@
             top: 50%;
             left: 12px;
             transform: translate(0, -41%);
+            pointer-events: none;
         }
     }
 }

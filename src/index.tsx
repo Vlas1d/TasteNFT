@@ -7,6 +7,7 @@ import "./style.scss";
 const root = document.getElementById('root') as HTMLBodyElement;
 
 ReactDOM.render(
-    <HashRouter>
-        <App />
-    </HashRouter>, root);
+    <React.StrictMode>
+        <HashRouter>
+            <App />
+        </HashRouter></React.StrictMode>, root);

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Main from './components/pages/main/Main';
 import Artwork from './components/pages/artwork/Artwork';
 import Profile from './components/pages/profile/Profile';
+import Search from './components/pages/search/Search';
 
 const App: React.FC = () => {
     return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
                 <Route path="/" element={<Main />} />
                 <Route path="/artwork" element={<Artwork />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/search" element={<Search />} />
             </Routes>
         </>
     );
