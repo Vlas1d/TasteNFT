@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 //-------styles
 import '../../../style.scss';
@@ -10,9 +11,6 @@ import b from '../../common/button.module.scss';
 import Header from '../../common/header/Header';
 import UserMiddle from '../../common/UserMiddle';
 import ArtCard from '../../common/artCard/ArtCard';
-import UserBig from '../../common/UserBig';
-import Bid from '../../common/Bid';
-import CurrentBid from '../artwork/CurrentBid';
 import MainSlider from './MainSlider';
 import Sold from '../../common/Sold';
 import Button from '../../common/Button';
@@ -57,7 +55,9 @@ const Main = () => {
             <div className='wrapper'>
                 <div className={`${m.main} container`}>
                     <div className={m.main__info}>
-                        <UserMiddle name='User Name' />
+                        <Link to="/profile">
+                            <UserMiddle name='User Name' />
+                        </Link>
                         <h1>WFH - art name</h1>
                         <div className={m.main__description}>
                             <span>Description: </span> The iconic meme that became a viral Internet sensation and an indispensable part of the gachimuchi music genre. This was taken when I was very young and in my full "performance" attire. That part of me now "lives" on platforms like Twitch, YouTube, and Bilibili (B 站).

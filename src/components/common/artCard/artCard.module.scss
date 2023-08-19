@@ -50,4 +50,9 @@
             color: rgba(255, 255, 255, 0.50);
         }
     }
+    &__drop {
+        position: absolute;
+        top: 22px;
+        right: 15px;
+    }
 }

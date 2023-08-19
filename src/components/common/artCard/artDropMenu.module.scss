@@ -1,0 +1,57 @@
+.dropMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &, & * {
+        transition: all 0.3s ease 0s;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    
+        background: #fff;
+    
+        cursor: pointer;
+
+        &.openedMenu {
+            background: #ffffff7b;
+            &:hover {
+                box-shadow: 0px 0px 0px #fff;
+            }
+        }
+        &.closedMenu {
+            &:hover {
+                box-shadow: 0px 0px 15px #fff;
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px
+    }
+    &__menuItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+
+        background: #fff;
+
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 15px #fff;
+        }
+    }
+}

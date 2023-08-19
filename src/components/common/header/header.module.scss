@@ -10,6 +10,12 @@
     background: #30363D;
     box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
 
+    
+    img {
+        width: 56px !important;
+        height: 47px !important;
+    }
+
     z-index: 999;
 
     &__search {

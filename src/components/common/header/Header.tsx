@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 
@@ -14,7 +15,9 @@ interface HeaderProps {
 const Header = (props: HeaderProps) => {
     return (
         <div className={style.header}>
-            <img src={logo} alt='' />
+            <Link to="/">
+                <img src={logo} alt='' />
+            </Link>
             <div className={style.header__search}>
                 <input placeholder='Search for ...'></input>
             </div>

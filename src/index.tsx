@@ -6,4 +6,7 @@ import "./style.scss";
 
 const root = document.getElementById('root') as HTMLBodyElement;
 
-ReactDOM.render(<App />, root);
+ReactDOM.render(
+    <HashRouter>
+        <App />
+    </HashRouter>, root);

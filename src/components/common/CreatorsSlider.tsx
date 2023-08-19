@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar, FreeMode, Mousewheel } from 'swiper/modules';
 
@@ -40,7 +41,9 @@ const CreatorsSlider = () => {
             >
                 {Array.from({ length: 8 }).map((_, index) => (
                     <SwiperSlide>
-                        <UserBig image={users[index]} name='User Name' />
+                        <Link to='/profile'>
+                            <UserBig image={users[index]} name='User Name' />
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>
