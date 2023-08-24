@@ -76,7 +76,7 @@ const Profile = () => {
                 </div>
                 <div className={`${p.arts} container`}>
                     <div className={p.arts__filter}>
-                        <a className='selected' href='#'>Created</a>
+                        <a className='selected' href=''>Created</a>
                         <a href='#'>Collected</a>
                         <a href='#'>Bids</a>
                     </div>

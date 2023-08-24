@@ -16,6 +16,8 @@ import Sold from '../../common/Sold';
 import Button from '../../common/Button';
 import DropList from '../../common/dropList/DropList';
 import CreatorsSlider from '../../common/CreatorsSlider';
+
+import CreatingArtwork from '../../modal/creatingArtwork/CreatingArtwork';
 //------------------
 
 //-------images
@@ -52,6 +54,7 @@ const Main = () => {
             <div className={m.header}>
                 <Header auth={false} />
             </div>
+            <CreatingArtwork />
             <div className='wrapper'>
                 <div className={`${m.main} container`}>
                     <div className={m.main__info}>

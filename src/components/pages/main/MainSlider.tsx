@@ -31,7 +31,7 @@ const MainSlider = () => {
                 cardsEffect={{
                     slideShadows: false, // Вимикаємо тіні на слайдах
                     rotate: false,
-                    perSlideOffset: 29,
+                    perSlideOffset: 30.5,
                 }}
 
                 pagination={{

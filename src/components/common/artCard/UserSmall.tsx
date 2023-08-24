@@ -16,7 +16,7 @@ const UserSmall = (props: UserSmallProps) => {
             <img src={props.image} alt='user' />
             <div>
                 <span className={style.userSmall__name}>{props.name}</span>
-                <a href='#' className={style.userSmall__tag}>{tag}</a>
+                <a href='#/profile' className={style.userSmall__tag}>{tag}</a>
             </div>
         </div>
     );

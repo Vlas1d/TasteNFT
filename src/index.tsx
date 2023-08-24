@@ -10,4 +10,5 @@ ReactDOM.render(
     <React.StrictMode>
         <HashRouter>
             <App />
-        </HashRouter></React.StrictMode>, root);
+        </HashRouter>
+    </React.StrictMode>, root);

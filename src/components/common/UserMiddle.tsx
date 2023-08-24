@@ -17,7 +17,7 @@ const UserMiddle = (props: UserMiddleProps) => {
             <img src={avatar} alt='user' />
             <div>
                 <span className={style.userMiddle__name}>{props.name}</span>
-                <a href='#' className={style.userMiddle__tag}>{tag}</a>
+                <a href='#/profile' className={style.userMiddle__tag}>{tag}</a>
             </div>
         </div>
     );

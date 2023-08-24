@@ -25,7 +25,7 @@ const Header = (props: HeaderProps) => {
 
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Це забезпечить плавну анімацію прокрутки
+            behavior: 'smooth'
         });
 
         if (location.pathname === '/search' && inputRef.current) {
