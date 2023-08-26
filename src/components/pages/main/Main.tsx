@@ -54,7 +54,6 @@ const Main = () => {
             <div className={m.header}>
                 <Header auth={false} />
             </div>
-            <CreatingArtwork />
             <div className='wrapper'>
                 <div className={`${m.main} container`}>
                     <div className={m.main__info}>

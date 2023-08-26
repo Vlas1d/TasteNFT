@@ -82,7 +82,12 @@ const Profile = () => {
                     </div>
                     <div className={p.arts__items}>
                         {Array.from({ length: 8 }).map((_, index) => (
-                            <ArtCard artImage={arts[index]} userImage={avatars[index]} key={arts[index]} />
+                            <ArtCard
+                                artImage={arts[index]}
+                                userImage={avatars[index]}
+                                key={arts[index]}
+                                status={index === 1 ? 'On moderation' : index === 2 ? 'Declined' : 'Approved'}
+                            />
                         ))}
                     </div>
                 </div>

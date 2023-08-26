@@ -55,4 +55,48 @@
             pointer-events: none;
         }
     }
+    &__user {
+        display: flex;
+        margin-left: 19px;
+        img {
+            width: 64px !important;
+            height: 64px !important;
+        }
+        span {
+            font-family: 'Raleway-700' !important;
+            font-size: 16px !important;
+            margin-bottom: 7px;
+            margin-top: 4px;
+        }
+        a {
+            font-family: 'Raleway-500' !important;
+            font-size: 12px !important;
+            margin-top: -11px;
+        }
+        & > span {
+            display: flex;
+            align-items: center;
+
+            margin-left: -36px;
+            margin-bottom: -19px;
+            margin-right: 33px;
+
+            color: rgba(255, 255, 255, 0.50);
+            font-family: 'Raleway-600' !important;
+            font-size: 12px !important;
+            img {
+                width: 16px !important;
+                height: 16px !important;
+            }
+
+            div {
+                margin-left: 4px;
+                color: #fff !important;
+                font-family: 'Raleway-600';
+                span {
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }
 }
